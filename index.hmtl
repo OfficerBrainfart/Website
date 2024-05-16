@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Officer Brainfart</title>
+    <style>
+body {
+  background-color: black;
+  text-align: center;
+	scroll-behavior: ease-in-out;
+}
 
+#Title {
+  font-size: 250px;
+	font-family: fredoka;
+  background: linear-gradient(45deg, #4dff88, #3399ff);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	transition: background 1s ease;
+	user-select: none;
+	cursor: default;
+}
+.ContentTextContainer {
+	font-family: fredoka;
+  background: linear-gradient(45deg, #4dff88, #3399ff);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	user-select: none;
+	padding: 2px;
+}
+.ContentText {
+	font-size: 25px;
+	transition: background 1s ease;
+	user-select: none;
+	cursor: default;
+}
+
+/* Specific styling for the link within the label */
+label a{
+		
+		font-family: fredoka;
+  	background: linear-gradient(45deg, #4dff88, #3399ff);
+  	background-size: 100% 100%;
+ 	 	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 2px solid #007bff; /* Border style */
+    border-radius: 20px;
+    transition: border-color 0.3s;
+    display: inline-block;
+}
+
+label a:hover {
+    border-color: #00bcd4; /* Change border color on hover */
+}
+.stickysocials {
+	position: fixed;
+	color: white;
+}
+    </style>
+  </head>
+  <body>
+    <section id="Section-1">
+      <h1 id="Title"> Yo </h1>
+    </section>
+    <section id="Section-2">
+	    <label class="ContentTextContainer"><label class="ContentText"> I'm Officer Brainfart, and this is my website. I play a lot of Minecraft and am a content creator for Roblox Bedwars.</label>
+    </section>
+    <script>
+const title = document.getElementById('Title');
+
+document.addEventListener('mousemove', function (e) {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    const rect = title.getBoundingClientRect();
+    const titleX = rect.left + rect.width / 2;
+    const titleY = rect.top + rect.height / 2;
+
+    const angle = Math.atan2(mouseY - titleY, mouseX - titleX);
+    const angleDeg = angle * 180 / Math.PI;
+
+    title.style.background = `linear-gradient(${angleDeg}deg, #4dff88, #3399ff)`;
+    title.style.webkitBackgroundClip = 'text';
+    title.style.webkitTextFillColor = 'transparent';
+});
+
+function OpenFC() {
+	window.open('https://freshcut.gg/officerbrainfart', '_blank')
+}
+
+function OpenDD() {
+	window.open('https://discord.gg/AnQUGVPNBe', '_blank')
+}
+    </script>
+  </body>
+</html>
