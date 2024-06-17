@@ -15,7 +15,23 @@
 	    <label class="ContentTextContainer"><label class="ContentText"> I'm Officer Brainfart, and this is my website. I play a lot of Minecraft and am a content creator for Roblox Bedwars.</label>
     </section>
     <script>
+const textArray = ["Hello", "World", "JavaScript", "is", "awesome"];
+
 const title = document.getElementById('Title');
+	    
+function setRandomText(elementId) {
+    // Get a random index from the array
+    const randomIndex = Math.floor(Math.random() * textArray.length);
+    // Get the element by ID
+    const element = document.getElementById(elementId);
+    // Set the text content of the element
+    
+    title.textContent = textArray[randomIndex];
+    
+}
+
+// Usage
+setRandomText('yourElementId');
 
 document.addEventListener('mousemove', function (e) {
     const mouseX = e.clientX;
